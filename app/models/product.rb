@@ -7,7 +7,7 @@ class Product < ApplicationRecord
     .order("reviews_count DESC")
     )}
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
-  scope :search, -> (country_of_origin_parameter) { where("country_of_origin like ?", "%#{country_of_origin_parameter}%")}
+  scope :made_in_the_usa, -> { where("country_of_origin like ?", "%United States%")}
   validates :name, presence: true
   validates :cost, presence: true
   validates :country_of_origin, presence: true

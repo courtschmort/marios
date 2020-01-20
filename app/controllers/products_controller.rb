@@ -2,7 +2,14 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
-    render :index
+    if params[:three_most_recent]
+      @products = Product.three_most_recent
+    elsif params[:most_reviews]
+      @products = Product.most_reviews
+    elsif params[:made_in_the_usa]
+      @products = Product.made_in_the_usa
+    end
+      render :index
   end
 
   def new

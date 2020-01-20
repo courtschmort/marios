@@ -1,13 +1,20 @@
 <h1>Products</h1>
 
 <% if @products.any? %>
+<form>
+  <label>Filter:</label>
+    <button type="submit" name="three_most_recent">Three Most Recent</button>
+    <button type="submit" name="most_reviews">Most Reviews</button>
+    <button type="submit" name="made_in_the_usa">Made in the USA</button>
+    <a><%= link_to "Remove filters", products_path %></a>
+</form>
 <ul>
   <% @products.each do |product| %>
   <li><%= link_to product.name, product_path(product) %></li>
   <% end %>
 </ul>
 <% else %>
-<p>There are no products yet.</p>
+<p>There are no products.</p>
 <% end %>
 
-<p><%= link_to "Add a product", new_product_path %></p>
+<a><%= link_to "Add a product", new_product_path %></a>
