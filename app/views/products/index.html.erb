@@ -1,12 +1,15 @@
-<h1>Products</h1>
+<h2>Products</h2>
+
+<p><%= link_to "Add a product", new_product_path %></p>
 
 <% if @products.any? %>
 <form>
-  <label>Filter:</label>
-    <button type="submit" name="three_most_recent">Three Most Recent</button>
-    <button type="submit" name="most_reviews">Most Reviews</button>
-    <button type="submit" name="made_in_the_usa">Made in the USA</button>
+  <div class="form-group">
+    <button class="btn btn-primary" type="submit" name="three_most_recent">Three Most Recent</button>
+    <button class="btn btn-primary" type="submit" name="most_reviews">Most Reviews</button>
+    <button class="btn btn-primary" type="submit" name="made_in_the_usa">Made in the USA</button>
     <a><%= link_to "Remove filters", products_path %></a>
+  </div>
 </form>
 <ul>
   <% @products.each do |product| %>
@@ -16,5 +19,3 @@
 <% else %>
 <p>There are no products.</p>
 <% end %>
-
-<a><%= link_to "Add a product", new_product_path %></a>

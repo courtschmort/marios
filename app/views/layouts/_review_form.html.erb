@@ -2,12 +2,20 @@
 
 <%= form_for [@product, @review] do |f| %>
 <%= f.label :title %>
-<%= f.text_field :title %>
+<div class="form-group">
+  <%= f.text_field :title, class: "form-control" %>
+</div>
 <%= f.label :author %>
-<%= f.text_field :author %>
+<div class="form-group">
+  <%= f.text_field :author, class: "form-control" %>
+</div>
 <%= f.label :content_body %>
-<%= f.text_area :content_body %>
+<div class="form-group">
+  <%= f.text_area :content_body, class: "form-control" %>
+</div>
 <%= f.label :rating %>
-<%= range_field(:review, :rating, in: 1..5, value: '1', step: '1') %>
-<%= f.submit %>
+<div class="form-group">
+  <%= range_field(:review, :rating, in: 1..5, value: "1", step: "1", class: "form-control") %>
+</div>
+<%= f.submit class: "btn btn-primary" %>
 <% end %>
