@@ -1,5 +1,5 @@
-<h2><%= @product.name %></h2>
-<h3><strong>$<%= @product.cost %></strong>, <%= @product.country_of_origin %></h3>
+<h1><%= @product.name %></h1>
+<h2><strong>$<%= @product.cost %></strong>, <%= @product.country_of_origin %></h2>
 
 <% if @product.reviews.any? %>
 <p>Here are the reviews for <%= @product.name %>:</p>

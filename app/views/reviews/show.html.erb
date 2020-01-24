@@ -4,9 +4,9 @@
 <% x += 1 %>
 <% stars.push('⭐️') %>
 <% end %>
-<h2><%= @review.title %></h2>
-<h3><%= stars.join(" ") %></h3>
-<h3><%= @review.author %></h3>
+<h1><%= @review.title %></h1>
+<h2><%= stars.join(" ") %></h2>
+<h2><%= @review.author %></h2>
 <p><%= @review.content_body %></p>
 
 <a><%= link_to "Edit", edit_product_review_path(@product, @review) %></a>  |  <a><%= link_to "Delete", product_review_path(@product, @review),
