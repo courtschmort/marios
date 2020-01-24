@@ -11,14 +11,8 @@ class User < ApplicationRecord
     self.password_hash = BCrypt::Engine.hash_secret(password,password_salt)
   end
 
-  def self.authenticate(input, password)
-    username = User.find_by "username = ?", input
-    email = User.find_by "email = ?", input
-    if username
-      user = username
-    else
-      user = email
-    end
+  def self.authenticate(email, password)
+    user = User.find_by "email = ?", email
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)
       user
     else
