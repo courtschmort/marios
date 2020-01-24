@@ -1,14 +1,14 @@
-<h2>Products</h2>
+<h1>Products</h1>
 
-<p><%= link_to "Add a product", new_product_path %></p>
+<p>Don't see what you're looking for? <%= link_to "Add a product here", new_product_path %>.</p>
 
 <% if @products.any? %>
 <form>
   <div class="form-group">
-    <button class="btn btn-primary" type="submit" name="three_most_recent">Three Most Recent</button>
-    <button class="btn btn-primary" type="submit" name="most_reviews">Most Reviews</button>
-    <button class="btn btn-primary" type="submit" name="made_in_the_usa">Made in the USA</button>
-    <a><%= link_to "Remove filters", products_path %></a>
+    <button class="btn btn-secondary" type="submit" name="three_most_recent">Three Most Recent</button>
+    <button class="btn btn-secondary" type="submit" name="most_reviews">Most Reviews</button>
+    <button class="btn btn-secondary" type="submit" name="made_in_the_usa">Made in the USA</button>
+    <a><%= link_to "Remove filters", products_path, role: "button", class: "btn btn-outline-secondary" %></a>
   </div>
 </form>
 <ul>
@@ -17,5 +17,5 @@
   <% end %>
 </ul>
 <% else %>
-<p>There are no products.</p>
+<p>There are no products to display.</p>
 <% end %>
