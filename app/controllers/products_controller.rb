@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
     elsif params[:made_in_the_usa]
       @products = Product.made_in_the_usa
     end
-      render :index
+    render :index
   end
 
   def new
@@ -54,6 +54,7 @@ class ProductsController < ApplicationController
   end
 
   private
+
   def product_params
     params.require(:product).permit(:name, :cost, :country_of_origin)
   end
