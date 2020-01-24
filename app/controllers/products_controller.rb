@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+  before_action :authorize
+
   def index
     @products = Product.all
     if params[:three_most_recent]
