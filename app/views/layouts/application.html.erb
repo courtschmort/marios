@@ -22,12 +22,9 @@
         <div class="navbar-nav">
           <% if current_user %>
             <%= link_to "Sign Out", '/signout', class: "nav-item nav-link" %>
-            <% if current_user.admin == true %>
-              <span class="navbar-text"><strong>Admin</strong></span>
-            <% end %>
           <% else %>
-          <%= link_to "Sign In", '/signin', class: "nav-item nav-link" %>
-          <%= link_to "Sign Up", 'signup', class: "nav-item nav-link" %>
+            <%= link_to "Sign In", '/signin', class: "nav-item nav-link" %>
+            <%= link_to "Sign Up", 'signup', class: "nav-item nav-link" %>
           <% end %>
         </div>
       </div>
@@ -40,6 +37,14 @@
       <% end %>
     <% end %>
     <div class="container">
+      <% if current_user %>
+        <p>
+          You are signed in as <%= current_user.username %>.
+          <% if current_user.admin == true %>
+            <span class="badge badge-pill badge-info">Admin</span>
+          <% end %>
+        </p>
+      <% end %>
       <%= yield %>
     </div>
   </body>
