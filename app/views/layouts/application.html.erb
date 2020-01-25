@@ -14,14 +14,17 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Mario's Specialty Food Products</a>
+      <a class="navbar-brand" href="/">Mario's Specialty Food Products</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <% if current_user %>
-          <%= link_to "Sign Out", '/signout', class: "nav-item nav-link" %>
+            <%= link_to "Sign Out", '/signout', class: "nav-item nav-link" %>
+            <% if current_user.admin == true %>
+              <span class="navbar-text"><strong>Admin</strong></span>
+            <% end %>
           <% else %>
           <%= link_to "Sign In", '/signin', class: "nav-item nav-link" %>
           <%= link_to "Sign Up", 'signup', class: "nav-item nav-link" %>
@@ -31,9 +34,9 @@
     </nav>
     <% flash.each do |name, msg| %>
       <% if flash[:alert] %>
-      <%= content_tag :div, msg, class: "alert alert-warning", role: "alert" %>
+        <%= content_tag :div, msg, class: "alert alert-warning", role: "alert" %>
       <% else %>
-      <%= content_tag :div, msg, class: "alert alert-success", role: "notice" %>
+        <%= content_tag :div, msg, class: "alert alert-success", role: "notice" %>
       <% end %>
     <% end %>
     <div class="container">

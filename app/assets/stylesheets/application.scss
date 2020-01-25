@@ -27,11 +27,6 @@ div.container {
   margin-bottom: 32px;
 }
 
-div#navbarNavAltMarkup.collapse.navbar-collapse {
-  display: flex;
-  justify-content: flex-end;
-}
-
 a.navbar-brand {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
@@ -52,7 +47,7 @@ h1, h2 {
   border-radius: 0rem;
 }
 
-div#custom-alert {
+div.custom-alert {
   padding: 12px 20px 0px;
 }
 
