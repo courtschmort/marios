@@ -9,4 +9,5 @@ describe Product do
     product = Product.create({name: "specialty food product", cost: 10, country_of_origin: "United States"})
     expect(product.name).to(eq("Specialty Food Product"))
   end
+  
 end

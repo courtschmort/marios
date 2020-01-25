@@ -250,17 +250,17 @@
 ] %>
 
 <%= form_for @product do |f| %>
-<%= f.label :name %>
-<div class="form-group">
-  <%= f.text_field :name, class: "form-control" %>
-</div>
-<%= f.label :cost %>
-<div class="form-group">
-  <%= f.number_field :cost, class: "form-control" %>
-</div>
-<%= f.label :country_of_origin %>
-<div class="form-group">
-  <%= f.select :country_of_origin, options_for_select(country_list, selected: "Select a country", disabled: "Select a country"), {}, {:class => "form-control"} %>
-</div>
-<%= f.submit class: "btn btn-primary" %>
+  <%= f.label :name %>
+  <div class="form-group">
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <%= f.label :cost %>
+  <div class="form-group">
+    <%= f.number_field :cost, class: "form-control" %>
+  </div>
+  <%= f.label :country_of_origin %>
+  <div class="form-group">
+    <%= f.select :country_of_origin, options_for_select(country_list, selected: "Select a country", disabled: "Select a country"), {}, {:class => "form-control"} %>
+  </div>
+  <%= f.submit class: "btn btn-primary" %>
 <% end %>

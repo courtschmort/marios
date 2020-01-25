@@ -17,44 +17,44 @@
  // Custom bootstrap variables must be set or imported *before* bootstrap.
  @import "bootstrap";
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #343a40;
-}
+ body {
+   font-family: 'Roboto', sans-serif;
+   color: #343a40;
+ }
 
-div.container {
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
+ a.navbar-brand {
+   font-family: 'Playfair Display', serif;
+   font-weight: 400;
+   padding: 4px 0px;
+ }
 
-a.navbar-brand {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  padding: 4px 0px;
-}
+ span.navbar-text {
+   padding: 8px;
+ }
 
-span.navbar-text {
-  padding: 8px;
-}
+ div.container {
+   margin-top: 32px;
+   margin-bottom: 32px;
+ }
 
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  margin: 0px 0px 16px;
-}
+ h1, h2 {
+   font-family: 'Playfair Display', serif;
+   font-weight: 400;
+   margin: 0px 0px 16px;
+ }
 
-.alert {
-  border-radius: 0rem;
-}
+ .alert {
+   border-radius: 0rem;
+ }
 
-div.custom-alert {
-  padding: 12px 20px 0px;
-}
+ div.custom-alert {
+   padding: 12px 20px 0px;
+ }
 
-input.btn.btn-primary, button.btn.btn-primary {
-  margin: 16px 8px 16px 0px;
-}
+ a.btn.btn-outline-secondary, button.btn.btn-secondary {
+   margin: 0px 8px 8px 0px;
+ }
 
-button.btn {
-  margin-right: 8px;
-}
+ input.btn.btn-primary, button.btn.btn-primary {
+   margin: 16px 8px 16px 0px;
+ }
