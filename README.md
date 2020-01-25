@@ -1,14 +1,18 @@
 # Mario's Specialty Food Products
 
-#### Rails with Active Record Independent Project for [Epicodus](https://www.epicodus.com/); January 17, 2020
+Please note that this README contains both Rails with Active Record and Authentication and Authorization independent projects from Ruby and Rails.
 
-Updated January 20, 2020
+#### Rails with Active Record & Authentication and Authorization Independent Projects for [Epicodus](https://www.epicodus.com/); January 17, 2020 & January 24, 2020
+
+<!-- Updated January 20, 2020 -->
 
 #### By Courtney Schild
 
 ## Description
 
-The following prompt outlines the project requirements:
+The following prompts outline the project requirements:
+
+###### Rails with Active Record Independent Project
 
 > You've in the running for a freelance development job as the developer for Mario's Speciality Food Products (or another fictional company of your choosing). First, Mario wants to make sure you're the right person for the job. He's asked you for an MVP and wants it by 5:00 tonight. The stakes are higher than usual, since Mario's old site had thousands of unique visitors each day. If you can get the job, this is a great way to increase your profile as a developer.
 > In particular, Mario is concerned about the information in his database being correct; your goal for today is to have the **most comprehensive validations and callbacks** to ensure information is properly saved and formatted in the database.
@@ -47,6 +51,21 @@ Your site should include a callback for the following:
 > #### Overall Styling
 You'll be demoing this site to the CEO of Mario's Specialty Foods, so it should look presentable.
 
+###### Authentication and Authorization Independent Project
+
+> This is the second week of a two-week project. Mario was so impressed by your MVP that he wants you to continue developing his new site. However, he's concerned about the fact that anyone viewing his site has full access to CRUD functionality. He has given you a list of user stories and has asked you to update his site to take them into account. Today's focus is on adding authentication to ease Mario's worries.
+> You will be adding authentication to expand your project from last week. Feel free to use the same exact project or rebuild it from scratch if you feel inclined. You may use either BCrypt or Devise to add authentication, whichever you prefer. **Your project should have full functionality by the time you submit it today, including all of last week's objectives.**
+> Here are the user stories Mario has provided you:
+* As an admin, I should be able to log in and log out of the application.
+* As an admin, I should be able to add, update and delete products.
+* As an admin, I should be able to add reviews.
+* As an admin, I want to ensure that other users don't have access to CRUD functionality.
+* As a user, I want to be able to create an account and add a review to a product. (A product can have many comments.) _This is the only CRUD functionality a user can have._
+
+## Documentation
+
+![Screen shot of WWW SQL Designer database](/app/assets/images/Screen%20Shot%202020-01-17%20at%2010.27.20%20AM.png)
+
 <!-- ## Specs -->
 
 <!-- This is another way to write out specs:
@@ -76,7 +95,11 @@ You'll be demoing this site to the CEO of Mario's Specialty Foods, so it should 
 
 ## Setup/Installation Requirements
 
-This application may be viewed or edited by following the instructions below to clone or download the repository to your computer.
+Please note that this application requires **Ruby 2.6.5** and **Rails 5.2.4.1**, as well as **Postgres 12.1**.
+
+This application is deployed to Heroku and may be viewed by clicking the link below or edited by following the instructions below to clone or download the repository to your computer.
+
+**Click [here](https://herokuapp.com) to open the Heroku app.**
 
 #### Cloning
 
@@ -87,20 +110,31 @@ This application may be viewed or edited by following the instructions below to 
 ###### From the command-line interface (CLI)
 1. To change the directory, type `cd Desktop` after the command prompt.
 2. To clone the repository to your Desktop, type `git clone https://github.com/courtschmort/marios.git` after the command prompt. (This web URL can be located within the **Clone or download** dropdown button in GitHub.)
+3. To change the directory, type `cd marios` after the command prompt. You will now be in the root directory of the project.
 
 For more information about cloning repositories available on GitHub, click [here](https://help.github.com/en/articles/which-remote-url-should-i-use).
 
-#### Ruby and Rails
+#### Ruby on Rails
 
-3. Complete the following lessons at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to install Ruby, etc.:
+4. Complete the following lessons at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to install Ruby:
   * [Installing Ruby](https://www.learnhowtoprogram.com/ruby/getting-started-with-ruby/installing-ruby)
-  * [Managing Ruby Versions](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/managing-ruby-versions-409a3b5b-7113-4c4e-aead-c97ce8231197)
-  * [Using Ruby Gems](https://www.learnhowtoprogram.com/ruby-and-rails/basic-ruby/using-ruby-gems)
-  * [Using RSpec](https://www.learnhowtoprogram.com/ruby-and-rails/bdd-with-ruby/using-rspec)
-  * [Rails Setup and Structure](https://www.learnhowtoprogram.com/ruby-and-rails/rails-with-active-record/rails-setup-and-structure-e5bd0352-06d3-4cd7-a6ed-797ea7dd6daa)
-  * [Active Record and Rake](https://www.learnhowtoprogram.com/ruby-and-rails/rails-with-active-record/active-record-and-rake)
-4. To bundle gems, type `bundle` after the command prompt.
-5. To run the application, type `rails s` after the command prompt (**control-C** to exit).
+5. To bundle gems, type `bundle` after the command prompt.
+6. To start the Rails server, type `rails s` after the command prompt (**control-C** to exit) and open http://localhost:3000 in your browser.
+7. To open the Rails console, type `rails c` after the command prompt (type `exit` to exit). (This is optional.)
+
+#### PostgreSQL
+
+8. Complete the following lesson at [learnhowtoprogram.com](https://www.learnhowtoprogram.com/) to install Postgres:
+  * [Installing Postgres](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-postgres-b34be9fd-381b-472e-bdb2-5c5c3f572b16)
+9. To start the Postgres server, type `postgres` after the command prompt. (Please note that Postgres must be running for some commands to work.)
+10. Open another terminal window or tab (**command-T** to open a new tab) and type `psql` after the command prompt to open an interactive terminal (type `\q` to quit). (This is optional.)
+
+You will also need to re-create (and optionally seed) the database, as well as run all existing migrations.
+
+11. To create a development database and a test database, type `rake db:create` after the command prompt.
+12. To run all existing migrations, type `rake db:migrate` after the command prompt.
+13. To update changes in your test database, type `rake db:test:prepare` after the command prompt.
+14. To seed the database, type `rake db:seed` after the command prompt. (This is optional.)
 
 ## Known Bugs
 
@@ -127,9 +161,13 @@ In the future, I plan to include the following key features:
 * Markdown
 * HTML
 * CSS
+* Sass
 * Bootstrap
 * JavaScript
-* Ruby and Rails
+* Ruby on Rails
+* PostgreSQL
+* BCrypt
+* Heroku
 * Atom
 
 ## License
