@@ -99,7 +99,7 @@ Please note that this application requires **Ruby 2.6.5** and **Rails 5.2.4.1**,
 
 This application is deployed to Heroku and may be viewed by clicking the link below or edited by following the instructions below to clone or download the repository to your computer.
 
-**Click [here](https://herokuapp.com) to open the Heroku app.**
+**Click [here](https://sheltered-earth-89358.herokuapp.com/) to open the Heroku app.**
 
 #### Cloning
 
